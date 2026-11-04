@@ -1,0 +1,586 @@
+<title>Henrique Diniz · Portfólio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Silkscreen&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: uma "torre" vertical de fases; cada card é uma plataforma onde o personagem pisa no modo jogo. */
+:root {
+  --night: #151935;
+  --night-2: #1e2449;
+  --night-3: #283063;
+  --line: #3b4580;
+  --shadow: #0b0e22;
+  --ink: #eef0ff;
+  --muted: #a6acd8;
+  --sun: #ffc857;
+  --coral: #ff6f59;
+  --mint: #4fd1a5;
+  --f-display: "Pixelify Sans", "Courier New", monospace;
+  --f-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --f-ui: "Silkscreen", "Courier New", monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--night);
+  background-image:
+    radial-gradient(2px 2px at 12% 18%, #ffffff33 50%, transparent 51%),
+    radial-gradient(2px 2px at 68% 9%, #ffffff26 50%, transparent 51%),
+    radial-gradient(2px 2px at 87% 44%, #ffffff22 50%, transparent 51%),
+    radial-gradient(2px 2px at 34% 71%, #ffffff1f 50%, transparent 51%);
+  background-size: 420px 420px;
+  color: var(--ink);
+  font: 17px/1.6 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--sun); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+.wrap { max-width: 1040px; margin: 0 auto; display: grid; gap: 88px; padding-block: 28px 0; }
+
+/* nav */
+nav.top { display: flex; flex-wrap: wrap; gap: 6px 14px; font: 12px var(--f-ui); text-transform: uppercase; letter-spacing: .04em; }
+nav.top a { color: var(--muted); text-decoration: none; }
+nav.top a:hover { color: var(--ink); }
+nav.top .brand { color: var(--ink); margin-right: auto; }
+
+/* hero */
+.hero { display: grid; gap: 22px; }
+.hero-card { background: var(--night-2); border: 3px solid var(--line); box-shadow: 6px 6px 0 var(--shadow); padding: 32px clamp(20px, 4vw, 44px); display: grid; gap: 14px; }
+.eyebrow { font: 12px var(--f-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--mint); margin: 0; }
+h1 { font: 700 clamp(44px, 9vw, 96px)/.95 var(--f-display); margin: 0; letter-spacing: .01em; text-wrap: balance; }
+h1 span { color: var(--coral); }
+.role { font: 700 clamp(19px, 2.6vw, 24px)/1.3 var(--f-body); margin: 0; color: var(--ink); }
+.lead { font-size: 19px; max-width: 60ch; margin: 0; color: var(--muted); }
+.cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn { font: 700 18px var(--f-display); border: 3px solid var(--shadow); background: var(--sun); color: var(--shadow); padding: 12px 22px; cursor: pointer; box-shadow: 4px 4px 0 var(--shadow); }
+.btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--shadow); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--shadow); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); box-shadow: none; text-decoration: none; }
+.keys { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 11px var(--f-ui); color: var(--muted); }
+kbd { font: 11px var(--f-ui); border: 2px solid var(--line); border-bottom-width: 4px; padding: 1px 6px; color: var(--ink); background: var(--night-3); }
+.best { font: 11px var(--f-ui); color: var(--sun); }
+
+/* fases */
+section.fase { display: grid; gap: 26px; scroll-margin-top: 20px; }
+.fase-head { justify-self: start; display: grid; gap: 4px; background: var(--night-3); border: 3px solid var(--line); padding: 10px 18px 12px; box-shadow: 4px 4px 0 var(--shadow); }
+.fase-head .eyebrow { color: var(--sun); }
+h2 { font: 700 clamp(28px, 5vw, 40px)/1.05 var(--f-display); margin: 0; text-wrap: balance; letter-spacing: .02em; }
+/* a Pixelify junta "fi"/"fl" numa ligadura que fica ilegível */
+h1, h2, h3 { font-variant-ligatures: none; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 40px 36px; align-items: start; }
+.card { background: var(--night-2); border: 3px solid var(--line); box-shadow: 6px 6px 0 var(--shadow); padding: 20px 22px; display: grid; gap: 10px; min-width: 0; }
+.card h3 { font: 700 22px/1.15 var(--f-display); margin: 0; }
+.card p { margin: 0; color: var(--muted); }
+.card .meta { font: 11px var(--f-ui); color: var(--mint); text-transform: uppercase; letter-spacing: .05em; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tags li { font: 11px var(--f-ui); border: 2px solid var(--line); padding: 2px 7px; color: var(--ink); }
+.status { justify-self: start; font: 11px var(--f-ui); text-transform: uppercase; letter-spacing: .05em; padding: 2px 8px; border: 2px solid var(--line); color: var(--muted); margin: 0; }
+.status.on { border-color: var(--mint); color: var(--mint); }
+.status.on::before { content: "● "; }
+.status.gh { border-color: var(--sun); color: var(--sun); }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; }
+.facts dt { font: 11px var(--f-ui); color: var(--mint); text-transform: uppercase; padding-top: 4px; }
+.facts dd { margin: 0; }
+.wide { grid-column: 1 / -1; }
+.prose p { color: var(--ink); max-width: 64ch; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.chips li { font: 13px var(--f-ui); background: var(--night-3); border: 3px solid var(--line); padding: 6px 12px; transition: background .2s, color .2s; }
+.chips li.got { background: var(--mint); color: var(--shadow); border-color: var(--shadow); }
+
+.timeline .card { position: relative; }
+.timeline .ano { font: 700 20px var(--f-display); color: var(--sun); }
+
+.trophy { width: 34px; height: 34px; image-rendering: pixelated; }
+.premio.got { border-color: var(--sun); }
+
+.contact-list { display: grid; gap: 10px; }
+.contact-row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.contact-row code { font: 15px var(--f-ui); background: var(--night-3); padding: 4px 8px; word-break: break-all; }
+.mini { font: 11px var(--f-ui); background: transparent; color: var(--muted); border: 2px solid var(--line); padding: 4px 8px; cursor: pointer; }
+
+footer#fim { margin-top: 120px; background: var(--night-3); border-top: 3px solid var(--line); padding: 26px 20px 40px; text-align: center; font: 12px var(--f-ui); color: var(--muted); margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); }
+
+.plat.bump { animation: bump .2s steps(3); }
+@keyframes bump { 50% { transform: translateY(-7px); } }
+
+/* modo jogo */
+html.playing { overflow: hidden; }
+html.playing .plat { border-top-color: var(--mint); }
+html.playing nav.top, html.playing .cta { visibility: hidden; }
+#game { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 20; image-rendering: pixelated; }
+.hud { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 30; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); background: #0b0e22e6; border-bottom: 3px solid var(--line); font: 12px var(--f-ui); font-variant-numeric: tabular-nums; }
+.hud b { color: var(--sun); font-weight: 400; }
+.hud .sp { margin-left: auto; display: flex; gap: 8px; }
+.touch { position: fixed; z-index: 30; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)); pointer-events: none; }
+.touch div { display: flex; gap: 10px; }
+.touch button { pointer-events: auto; width: 62px; height: 62px; font: 20px var(--f-ui); background: #1e2449cc; color: var(--ink); border: 3px solid var(--line); touch-action: none; user-select: none; -webkit-user-select: none; }
+.touch button.on { background: var(--mint); color: var(--shadow); }
+.overlay { position: fixed; inset: 0; z-index: 40; background: #0b0e22cc; display: grid; place-items: center; padding: 16px; }
+.panel { background: var(--night-2); border: 3px solid var(--sun); box-shadow: 8px 8px 0 var(--shadow); padding: 28px; max-width: 440px; width: 100%; display: grid; gap: 16px; }
+.panel h2 { color: var(--sun); }
+.stats { display: grid; grid-template-columns: 1fr auto; gap: 8px 20px; font: 13px var(--f-ui); font-variant-numeric: tabular-nums; margin: 0; }
+.stats dd { margin: 0; text-align: right; color: var(--sun); }
+.bar { height: 14px; border: 3px solid var(--line); background: var(--night); }
+.bar i { display: block; height: 100%; background: var(--mint); }
+
+@media (max-width: 560px) {
+  .wrap { gap: 64px; }
+  .grid { gap: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .plat.bump { animation: none; }
+}
+</style>
+
+<div class="wrap" id="app"></div>
+<footer id="fim" class="plat ground">
+  <p id="fim-txt">Fim da torre. Feito com HTML, CSS e JavaScript em 2026.</p>
+</footer>
+
+<canvas id="game" hidden></canvas>
+<div class="hud" id="hud" hidden>
+  <span>TEMPO <b id="h-time">0:00.0</b></span>
+  <span>PONTOS <b id="h-score">0</b></span>
+  <span>SKILLS <b id="h-skills">0/0</b></span>
+  <span>FASES <b id="h-fases">0/0</b></span>
+  <span class="sp">
+    <button class="mini" id="h-sound" type="button">SOM: ON</button>
+    <button class="mini" id="h-exit" type="button">SAIR (ESC)</button>
+  </span>
+</div>
+<div class="touch" id="touch" hidden>
+  <div><button type="button" data-k="left" aria-label="Esquerda">◀</button><button type="button" data-k="right" aria-label="Direita">▶</button></div>
+  <div><button type="button" data-k="down" aria-label="Descer ou mergulhar">▼</button><button type="button" data-k="jump" aria-label="Pular">▲</button></div>
+</div>
+<div class="overlay" id="end" hidden>
+  <div class="panel" role="dialog" aria-labelledby="end-t">
+    <p class="eyebrow">Você chegou ao fim</p>
+    <h2 id="end-t">Fim de jogo</h2>
+    <dl class="stats" id="end-stats"></dl>
+    <div><p class="eyebrow" style="margin-bottom:6px">Portfólio explorado</p><div class="bar"><i id="end-bar"></i></div></div>
+    <div class="cta">
+      <button class="btn" id="again" type="button">Jogar de novo</button>
+      <button class="btn ghost" id="read" type="button">Ler o portfólio</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ==========================================================
+   EDITE AQUI: todo o conteúdo do portfólio sai deste objeto.
+   Os textos abaixo são exemplos; troque pelos seus dados.
+   ========================================================== */
+const CONFIG = {
+  nome: "Henrique",
+  sobrenome: "Diniz",
+  cargo: "Full Stack Developer · Engenheiro de Software",
+  resumo: "Construo sistemas de ponta a ponta, da API ao front-end, com foco em código organizado e fácil de evoluir. Hoje sou engenheiro de software no Grupo Pau Brasil e estagiário full stack na AI/R Compass UOL.",
+  perfil: {
+    texto: [
+      "Comecei como desenvolvedor back-end com Java e Spring, aprendendo o ecossistema que vem junto: APIs REST, bancos relacionais, testes e arquitetura em camadas.",
+      "Depois migrei para o desenvolvimento web e passei a trabalhar no stack inteiro, com TypeScript, React, Next.js e Node.js, sem largar a base de back-end. Hoje cuido da plataforma digital das empresas do Grupo Pau Brasil."
+    ],
+    fatos: [
+      ["Atuação", "Full stack · Engenharia de Software"],
+      ["Hoje", "Grupo Pau Brasil · AI/R Compass UOL"],
+      ["Cidade", "Patos, PB"]
+    ]
+  },
+  skills: ["Java", "Spring Boot", "TypeScript", "JavaScript", "React", "Next.js", "Node.js", "Express", "AWS", "Microsserviços", "Docker", "SQL", "APIs REST", "Tailwind", "Git", "Vercel"],
+  areas: [
+    { titulo: "Back-end e APIs", texto: "APIs REST com autenticação JWT, regras de negócio isoladas em camadas e tratamento de erros consistente. Comecei em Java/Spring e hoje também uso Node.js e Express.", tags: ["Java", "Spring Boot", "Node.js", "SQL"] },
+    { titulo: "Front-end", texto: "Interfaces em React e Next.js com TypeScript strict, cache de dados com SWR, tema claro/escuro e i18n. Componentes de apresentação separados da lógica.", tags: ["React", "Next.js", "TypeScript", "Tailwind"] },
+    { titulo: "Cloud e arquitetura", texto: "Deploy contínuo, containers e serviços na AWS. Divido sistemas em serviços quando o domínio pede e mantenho chaves e segredos fora do client.", tags: ["AWS", "Microsserviços", "Docker", "Vercel"] }
+  ],
+  trajetoria: [
+    { ano: "Hoje", cargo: "Engenheiro de Software", local: "Grupo Pau Brasil", texto: "Desenvolvo a plataforma digital do grupo: site institucional, sites das empresas, portal do colaborador e área de carreiras." },
+    { ano: "Hoje", cargo: "Estagiário Full Stack", local: "AI/R Compass UOL", texto: "Atuo no desenvolvimento full stack em projetos da Compass UOL." },
+    { ano: "Desafio", cargo: "TechMart API e WorldScope", local: "Processo seletivo · KNEX Consultoria Jr.", texto: "Back-end em Node.js/Express com JWT e camadas, e front-end em Next.js 16 com TypeScript, SWR e proxy server-side para a API key." },
+    { ano: "Início", cargo: "Desenvolvedor Back-end", local: "Java · Spring", texto: "Primeiros sistemas com Java e Spring, APIs REST e bancos relacionais. A base que levo para o full stack." }
+  ],
+  projetos: [
+    { nome: "Grupo Pau Brasil", meta: "Site institucional e portal · 2026", status: "No ar", texto: "Site do grupo com ecossistema de empresas filtrável por segmento, newsletter, vagas, linha do tempo e acesso ao portal do colaborador.", tags: ["Next.js", "TypeScript", "Vercel"], link: "https://pau-brasil-development.vercel.app/" },
+    { nome: "Unida Construtora", meta: "Construção civil · 2026", status: "No ar", texto: "Site da construtora com empreendimentos imobiliários e projetos de construção civil.", tags: ["Next.js", "Vercel"], link: "https://unida-construtora.vercel.app" },
+    { nome: "TechMart API", meta: "API REST · Desafio KNEX", status: "No GitHub", texto: "Catálogo de produtos e vendas de uma loja virtual, substituindo o controle em planilhas. Autenticação JWT, senhas com bcrypt, camadas rotas → controllers → models e Docker.", tags: ["Node.js", "Express", "JWT", "Docker"], link: "https://github.com/henriquediiniz/techmart-api" },
+    { nome: "WorldScope", meta: "Front-end · Desafio KNEX", status: "No GitHub", texto: "Explorador de países sobre a RestCountries API v5. Busca, filtro e ordenação instantâneos no client, i18n pt/en e a API key protegida por Route Handlers.", tags: ["Next.js", "React 19", "TypeScript", "SWR"], link: "https://github.com/henriquediiniz/worldscope" },
+    { nome: "Pau Brasil Bebidas", meta: "Distribuição · Ambev", status: "Em desenvolvimento", texto: "Site da distribuidora com as 8 unidades na Paraíba e na Bahia.", tags: ["Next.js"], link: "" },
+    { nome: "Pau Brasil Motos", meta: "Mobilidade · Honda", status: "Em desenvolvimento", texto: "Rede de concessionárias Honda, da escolha da moto à manutenção.", tags: ["Next.js"], link: "" },
+    { nome: "Instituto YSO", meta: "Saúde e estética", status: "Em desenvolvimento", texto: "Clínica de estética em Sousa (PB).", tags: ["Next.js"], link: "" },
+    { nome: "Original Start", meta: "Mobilidade", status: "Em desenvolvimento", texto: "Motopeças em Petrolina (PE).", tags: ["Next.js"], link: "" },
+    { nome: "Hora 10", meta: "Varejo", status: "Em desenvolvimento", texto: "Rede de lojas e supermercado no interior da Paraíba.", tags: ["Next.js"], link: "" },
+    { nome: "Locadora Pau Brasil", meta: "Mobilidade", status: "Em desenvolvimento", texto: "Locação de veículos e gestão de frotas para empresas.", tags: ["Next.js"], link: "" },
+    { nome: "Fazenda Divina", meta: "Agro", status: "Em desenvolvimento", texto: "Produção agropecuária com foco em pecuária e melhoramento genético.", tags: ["Next.js"], link: "" }
+  ],
+  premios: [
+    { titulo: "Certificação AWS", meta: "Amazon Web Services", texto: "Certificação em computação na nuvem da AWS." }
+  ],
+  contato: {
+    email: "henriquediniz.dev@gmail.com",
+    linkedin: "https://www.linkedin.com/in/henriquediniz-dev/",
+    github: "https://github.com/henriquediiniz"
+  }
+};
+
+/* ---------- render ---------- */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tags = t => t && t.length ? `<ul class="tags">${t.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
+const TROPHY_SVG = `<svg class="trophy" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="#ffc857" d="M1 0h7v1h1v3H8v1H7v1H6v1H3V6H2V5H1V4H0V1h1z"/><path fill="#151935" d="M1 1h1v2H1zM7 1h1v2H7z"/><path fill="#c98f1c" d="M3 7h3v1h1v1H2V8h1z"/></svg>`;
+const fases = [];
+function fase(id, nome, body) { fases.push({ id, nome }); const n = fases.length; return `<section class="fase" id="${id}" data-fase="${n}"><div class="fase-head plat"><p class="eyebrow">Fase ${n}</p><h2>${esc(nome)}</h2></div>${body}</section>`; }
+
+function render() {
+  const C = CONFIG;
+  const full = (C.nome + " " + (C.sobrenome || "")).trim();
+  let html = `<nav class="top" aria-label="Fases"><a class="brand" href="#topo">${esc(full)}</a>`;
+  const body = [];
+  body.push(fase("perfil", "Perfil", `<div class="grid"><div class="card plat wide prose">${C.perfil.texto.map(p => `<p>${esc(p)}</p>`).join("")}</div><div class="card plat"><dl class="facts">${C.perfil.fatos.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl></div><div class="card plat"><p class="meta">Habilidades</p><ul class="chips" id="chips">${C.skills.map((s, i) => `<li data-i="${i}">${esc(s)}</li>`).join("")}</ul></div></div>`));
+  body.push(fase("atuacao", "Atuação", `<div class="grid">${C.areas.map(a => `<article class="card plat"><h3>${esc(a.titulo)}</h3><p>${esc(a.texto)}</p>${tags(a.tags)}</article>`).join("")}</div>`));
+  body.push(fase("trajetoria", "Trajetória", `<div class="grid timeline">${C.trajetoria.map(t => `<article class="card plat bugs"><span class="ano">${esc(t.ano)}</span><h3>${esc(t.cargo)}</h3><p class="meta">${esc(t.local)}</p><p>${esc(t.texto)}</p></article>`).join("")}</div>`));
+  body.push(fase("projetos", "Projetos", `<div class="grid">${C.projetos.map(p => `<article class="card plat bugs">${p.status ? `<p class="status${p.status === "No ar" ? " on" : p.status === "No GitHub" ? " gh" : ""}">${esc(p.status)}</p>` : ""}<p class="meta">${esc(p.meta)}</p><h3>${esc(p.nome)}</h3><p>${esc(p.texto)}</p>${tags(p.tags)}${p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">Ver projeto →</a>` : ""}</article>`).join("")}</div>`));
+  if (C.premios.length) body.push(fase("premios", "Prêmios", `<div class="grid">${C.premios.map((p, i) => `<article class="card plat premio" data-premio="${i}">${TROPHY_SVG}<h3>${esc(p.titulo)}</h3><p class="meta">${esc(p.meta)}</p><p>${esc(p.texto)}</p></article>`).join("")}</div>`));
+  const ct = C.contato;
+  body.push(fase("contato", "Contato", `<div class="grid"><div class="card plat wide contact-list"><p>Quer conversar sobre um projeto ou uma vaga? Me chame por um destes canais.</p>
+    <div class="contact-row"><code id="mail">${esc(ct.email)}</code><button class="mini" type="button" id="copy">Copiar e-mail</button></div>
+    <div class="contact-row">${ct.linkedin ? `<a href="${esc(ct.linkedin)}" target="_blank" rel="noopener">LinkedIn →</a>` : ""}${ct.github ? `<a href="${esc(ct.github)}" target="_blank" rel="noopener">GitHub →</a>` : ""}</div></div></div>`));
+  html += fases.map(f => `<a href="#${f.id}">${esc(f.nome)}</a>`).join("") + `</nav>`;
+  html += `<header class="hero" id="topo"><div class="hero-card plat" id="hero">
+      <p class="eyebrow">Portfólio · ${new Date().getFullYear()}</p>
+      <h1>${esc(C.nome)}${C.sobrenome ? ` <span>${esc(C.sobrenome)}</span>` : `<span>.</span>`}</h1>
+      <p class="role">${esc(C.cargo)}</p>
+      <p class="lead">${esc(C.resumo)}</p>
+    </div>
+    <div class="cta"><button class="btn" id="play" type="button">▶ Jogar</button><a class="btn ghost" href="#perfil">Só quero ler ↓</a><span class="best" id="best"></span></div>
+    <div class="keys"><span><kbd>←</kbd><kbd>→</kbd> anda</span><span><kbd>espaço</kbd> pula, 2× no ar</span><span><kbd>↓</kbd> desce do card · no ar: mergulho</span><span><kbd>enter</kbd> joga</span></div>
+  </header>`;
+  document.getElementById("app").innerHTML = html + body.join("");
+  document.getElementById("copy").addEventListener("click", () => {
+    const t = CONFIG.contato.email, btn = document.getElementById("copy");
+    const done = () => { btn.textContent = "Copiado"; setTimeout(() => btn.textContent = "Copiar e-mail", 1600); };
+    const sel = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Selecionado: Ctrl+C"; };
+    try { navigator.clipboard.writeText(t).then(done, sel); } catch (e) { sel(); }
+  });
+}
+render();
+
+/* ---------- jogo ---------- */
+const $ = id => document.getElementById(id);
+const cvs = $("game"), ctx = cvs.getContext("2d");
+const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+const fmt = ms => { const s = ms / 1000, m = Math.floor(s / 60); return m + ":" + (s % 60).toFixed(1).padStart(4, "0"); };
+function showBest() { const b = store.get("pf-best"); $("best").textContent = b ? "Seu recorde: " + fmt(+b) : ""; }
+showBest();
+
+// sprites em texto: cada caractere é um pixel
+const PAL = { c: "#ff6f59", s: "#ffcfa3", e: "#151935", t: "#4fd1a5", p: "#3b4580", b: "#0b0e22", w: "#ffffff", g: "#b07cff", a: "#e0c8ff", l: "#6f4fb8", y: "#ffc857", d: "#c98f1c" };
+const HEAD = ["..cccc..", ".ccccccc", "..sses..", "..ssss..", "...ss..."];
+const SPR = {
+  idle: [...HEAD, ".tttttt.", "s.tttt.s", "..tttt..", "..pppp..", "..p..p..", "..p..p..", ".bb..bb."],
+  run1: [...HEAD, ".tttttt.", "s.tttt.s", "..tttt..", "..pppp..", ".pp..p..", ".p....p.", "bb....bb"],
+  run2: [...HEAD, ".tttttt.", ".stttts.", "..tttt..", "..pppp..", "...pp...", "...pp...", "..bbb..."],
+  jump: [...HEAD, "stttttts", "..tttt..", "..tttt..", "..pppp..", "..p..pp.", ".bb...b.", "........"],
+  dive: [...HEAD, ".tttttt.", "..tttt..", "..ttts..", "..pppy..", "..p.yyy.", ".bb..y..", "........"],
+  bug1: [".a....a.", "..a..a..", ".gggggg.", "gwegwegg", "gggggggg", "l.l..l.l"],
+  bug2: [".a....a.", "..a..a..", ".gggggg.", "gwegwegg", "gggggggg", ".l.ll.l."],
+  trophy: ["yyyyyyy", "y.yyy.y", ".yyyyy.", "..yyy..", "...y...", "..ddd..", ".ddddd."],
+  coin: [".yy.", "yddy", "yddy", ".yy."]
+};
+function drawSpr(name, x, y, scale, flip, alpha) {
+  const rows = SPR[name], w = rows[0].length;
+  if (alpha != null) ctx.globalAlpha = alpha;
+  for (let r = 0; r < rows.length; r++) for (let i = 0; i < w; i++) {
+    const ch = rows[r][flip ? w - 1 - i : i];
+    if (ch === ".") continue;
+    ctx.fillStyle = PAL[ch]; ctx.fillRect(Math.round(x + i * scale), Math.round(y + r * scale), scale, scale);
+  }
+  ctx.globalAlpha = 1;
+}
+
+// som
+let actx = null, soundOn = true;
+function beep(f1, f2, dur, type = "square", vol = 0.05) {
+  if (!soundOn || !actx) return;
+  const t = actx.currentTime, o = actx.createOscillator(), g = actx.createGain();
+  o.type = type; o.frequency.setValueAtTime(f1, t); o.frequency.exponentialRampToValueAtTime(f2, t + dur);
+  g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  o.connect(g).connect(actx.destination); o.start(t); o.stop(t + dur);
+}
+const sfx = {
+  jump: () => beep(300, 620, 0.12), dbl: () => beep(500, 900, 0.1), coin: () => { beep(988, 988, 0.06); setTimeout(() => beep(1319, 1319, 0.12), 60); },
+  bonk: () => beep(180, 90, 0.1, "square", 0.07), kill: () => beep(700, 120, 0.18, "sawtooth", 0.05), hurt: () => beep(200, 60, 0.25, "sawtooth", 0.06),
+  dive: () => beep(900, 200, 0.15, "triangle", 0.06), trophy: () => [523, 659, 784, 1047].forEach((f, i) => setTimeout(() => beep(f, f, 0.12), i * 80))
+};
+
+const G = 0.55, SCALE = 3, PW = 8 * SCALE, PH = 12 * SCALE;
+let plats = [], sects = [], items = [], bugs = [], parts = [], pops = [];
+let P, keys = {}, running = false, last = 0, t0 = 0, elapsed = 0, score = 0, camY = 0, W = 0, H = 0, dpr = 1;
+let quality = 1, slowFrames = 0, measureT = 0, stats;
+
+function measure() {
+  const sy = scrollY;
+  W = document.documentElement.clientWidth;
+  for (const pl of plats) {
+    if (pl.el.classList.contains("bump")) continue;
+    const r = pl.el.getBoundingClientRect();
+    pl.x = pl.ground ? 0 : r.left; pl.w = pl.ground ? W : r.width; pl.y = r.top + sy; pl.h = r.height;
+  }
+  for (const s of sects) { const r = s.el.getBoundingClientRect(); s.top = r.top + sy; s.bot = r.bottom + sy; }
+}
+function resize() {
+  dpr = quality ? Math.min(devicePixelRatio || 1, 2) : 1;
+  H = innerHeight; cvs.width = innerWidth * dpr; cvs.height = H * dpr;
+  measure();
+}
+
+function setup() {
+  plats = [...document.querySelectorAll(".plat")].map(el => ({ el, ground: el.classList.contains("ground"), card: el.classList.contains("card"), coin: el.classList.contains("card"), x: 0, y: 0, w: 0, h: 0 }));
+  sects = [...document.querySelectorAll("section.fase")].map(el => ({ el, seen: false, top: 0, bot: 0 }));
+  measure();
+  const cards = plats.filter(p => p.card && !p.el.classList.contains("premio"));
+  items = CONFIG.skills.map((s, i) => {
+    const pl = cards[(i * 3 + 1) % cards.length];
+    return { kind: "skill", label: s, i, pl, fx: 0.12 + ((i * 0.37) % 0.76), lift: 48 + (i % 2) * 26, got: false, ph: i };
+  });
+  plats.filter(p => p.el.classList.contains("premio")).forEach(pl => items.push({ kind: "trophy", pl, fx: 0.5, lift: 30, got: false, ph: 0, i: +pl.el.dataset.premio }));
+  bugs = plats.filter(p => p.el.classList.contains("bugs")).map((pl, i) => ({ pl, off: 20 + (i * 53) % 120, dir: i % 2 ? 1 : -1, dead: false, sp: 0.9 + (i % 3) * 0.25 }));
+  const hero = plats.find(p => p.el.id === "hero");
+  P = { x: hero.x + 30, y: hero.y - PH, vx: 0, vy: 0, onGround: true, plat: hero, jumps: 0, face: 1, dive: false, inv: 0, ignore: null, anim: 0 };
+  parts = []; pops = []; score = 0; elapsed = 0; camY = scrollY;
+  stats = { bugs: 0, coins: 0 };
+  document.querySelectorAll(".chips li.got, .premio.got").forEach(e => e.classList.remove("got"));
+}
+
+function start() {
+  if (!actx) { try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} }
+  $("end").hidden = true;
+  document.documentElement.classList.add("playing");
+  scrollTo(0, 0);
+  cvs.hidden = false; $("hud").hidden = false;
+  $("touch").hidden = !matchMedia("(pointer: coarse)").matches;
+  quality = 1; resize(); setup();
+  running = true; last = performance.now(); t0 = last;
+  requestAnimationFrame(loop);
+}
+function stop() {
+  running = false; keys = {};
+  document.documentElement.classList.remove("playing");
+  cvs.hidden = true; $("hud").hidden = true; $("touch").hidden = true;
+}
+
+function burst(x, y, color, n, spd = 3) {
+  if (!quality) n = Math.ceil(n / 3);
+  for (let i = 0; i < n; i++) { const a = Math.random() * Math.PI * 2, v = Math.random() * spd; parts.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v - 1, life: 30 + Math.random() * 20, c: color }); }
+}
+function pop(x, y, txt, c = "#ffc857") { pops.push({ x, y, txt, c, life: 50 }); }
+const hit = (ax, ay, aw, ah, bx, by, bw, bh) => ax < bx + bw && ax + aw > bx && ay < by + bh && ay + ah > by;
+
+function update(k) {
+  const p = P;
+  const ax = (keys.right ? 1 : 0) - (keys.left ? 1 : 0);
+  if (ax) { p.vx += ax * 0.9 * k; p.face = ax; } else p.vx *= Math.pow(p.onGround ? 0.72 : 0.9, k);
+  p.vx = Math.max(-4.6, Math.min(4.6, p.vx));
+  if (keys.jumpHit) {
+    keys.jumpHit = false;
+    if (p.onGround) { p.vy = -11.5; p.jumps = 1; p.onGround = false; sfx.jump(); burst(p.x + PW / 2, p.y + PH, "#a6acd8", 6, 1.5); }
+    else if (p.jumps < 2) { p.vy = -10; p.jumps = 2; p.dive = false; sfx.dbl(); burst(p.x + PW / 2, p.y + PH, "#4fd1a5", 8, 2); }
+  }
+  if (keys.downHit) {
+    keys.downHit = false;
+    if (p.onGround && p.plat && !p.plat.ground) { p.ignore = p.plat; p.onGround = false; p.y += 3; p.vy = 2; }
+    else if (!p.onGround && !p.dive) { p.dive = true; p.vy = Math.max(p.vy, 12); p.vx *= 0.3; sfx.dive(); }
+  }
+  p.vy = Math.min(p.vy + G * k, p.dive ? 17 : 14);
+  const prevTop = p.y, prevBot = p.y + PH;
+  p.x = Math.max(0, Math.min(W - PW, p.x + p.vx * k));
+  p.y += p.vy * k;
+  const wasGround = p.onGround; p.onGround = false;
+  for (const pl of plats) {
+    if (pl === p.ignore || !(p.x + PW > pl.x + 2 && p.x < pl.x + pl.w - 2)) continue;
+    if (p.vy >= 0 && prevBot <= pl.y + 1 && p.y + PH >= pl.y) {
+      p.y = pl.y - PH; p.vy = 0; p.onGround = true; p.plat = pl; p.jumps = 0;
+      if (p.dive) { p.dive = false; burst(p.x + PW / 2, pl.y, "#ffc857", 14, 4); sfx.bonk(); bumpPlat(pl, false); }
+      else if (!wasGround) burst(p.x + PW / 2, pl.y, "#a6acd8", 5, 1.2);
+      break;
+    }
+    if (p.vy < 0 && !pl.ground && prevTop >= pl.y + pl.h - 1 && p.y <= pl.y + pl.h) {
+      p.y = pl.y + pl.h; p.vy = 1.5; sfx.bonk(); bumpPlat(pl, true);
+      break;
+    }
+  }
+  if (p.ignore && (p.y > p.ignore.y + p.ignore.h || p.y + PH < p.ignore.y - 4)) p.ignore = null;
+  if (p.inv > 0) p.inv -= k;
+  p.anim += Math.abs(p.vx) * k * 0.08;
+
+  for (const b of bugs) {
+    if (b.dead) continue;
+    const bw = 8 * SCALE, bh = 6 * SCALE;
+    b.off += b.dir * b.sp * k;
+    if (b.off < 0) { b.off = 0; b.dir = 1; } else if (b.off > b.pl.w - bw) { b.off = b.pl.w - bw; b.dir = -1; }
+    const bx = b.pl.x + b.off, by = b.pl.y - bh;
+    if (!hit(p.x, p.y, PW, PH, bx, by, bw, bh)) continue;
+    if (p.dive || (p.vy > 0 && prevBot <= by + 8)) {
+      b.dead = true; stats.bugs++; score += 100; p.vy = -8; p.dive = false; p.jumps = 1;
+      sfx.kill(); burst(bx + bw / 2, by + bh / 2, "#b07cff", 16, 3.5); pop(bx, by, "+100 BUG");
+    } else if (p.inv <= 0) {
+      score = Math.max(0, score - 50); p.inv = 70; p.vx = (p.x < bx ? -1 : 1) * 6; p.vy = -6; p.onGround = false;
+      sfx.hurt(); pop(p.x, p.y, "-50", "#ff6f59");
+    }
+  }
+
+  for (const it of items) {
+    if (it.got) continue;
+    it.ph += 0.05 * k;
+    const ix = it.pl.x + it.fx * it.pl.w - 12, iy = it.pl.y - it.lift + Math.sin(it.ph) * 4;
+    if (!hit(p.x, p.y, PW, PH, ix, iy, 24, 22)) continue;
+    it.got = true;
+    if (it.kind === "skill") {
+      score += 25; sfx.coin(); burst(ix + 12, iy + 10, "#4fd1a5", 12); pop(ix, iy, "+25 " + it.label, "#4fd1a5");
+      const chip = document.querySelector(`#chips li[data-i="${it.i}"]`); if (chip) chip.classList.add("got");
+    } else {
+      score += 200; sfx.trophy(); burst(ix + 12, iy + 10, "#ffc857", 24, 4); pop(ix, iy, "+200 TROFÉU");
+      const card = document.querySelector(`[data-premio="${it.i}"]`); if (card) card.classList.add("got");
+    }
+  }
+
+  const cy = p.y + PH / 2;
+  for (const s of sects) if (!s.seen && cy > s.top && cy < s.bot) s.seen = true;
+
+  for (const q of parts) { q.x += q.vx * k; q.y += q.vy * k; q.vy += 0.15 * k; q.life -= k; }
+  parts = parts.filter(q => q.life > 0);
+  for (const q of pops) { q.y -= 0.6 * k; q.life -= k; }
+  pops = pops.filter(q => q.life > 0);
+
+  if (p.onGround && p.plat.ground) finish();
+}
+
+function bumpPlat(pl, fromBelow) {
+  const el = pl.el; el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump");
+  setTimeout(() => el.classList.remove("bump"), 220);
+  for (const b of bugs) if (!b.dead && b.pl === pl && Math.abs(b.pl.x + b.off - P.x) < 70) {
+    b.dead = true; stats.bugs++; score += 100; sfx.kill(); burst(b.pl.x + b.off + 12, pl.y - 9, "#b07cff", 14, 3); pop(b.pl.x + b.off, pl.y - 30, "+100 BUG");
+  }
+  if (fromBelow && pl.coin) {
+    pl.coin = false; stats.coins++; score += 50; sfx.coin();
+    const cx = Math.max(pl.x, Math.min(pl.x + pl.w - 12, P.x + 6));
+    parts.push({ x: cx, y: pl.y - 10, vx: 0, vy: -6, life: 34, coin: true }); pop(cx, pl.y - 30, "+50");
+  }
+}
+
+function finish() {
+  running = false;
+  const seen = sects.filter(s => s.seen).length, sk = items.filter(i => i.kind === "skill"), tr = items.filter(i => i.kind === "trophy");
+  const skGot = sk.filter(i => i.got).length, trGot = tr.filter(i => i.got).length, bugTot = bugs.length;
+  const totalUnits = sects.length + sk.length + tr.length + bugTot + plats.filter(p => p.card).length;
+  const got = seen + skGot + trGot + stats.bugs + stats.coins;
+  const pct = Math.round(got / totalUnits * 100);
+  const prev = +store.get("pf-best") || 0, rec = !prev || elapsed < prev;
+  if (rec) store.set("pf-best", String(Math.round(elapsed)));
+  $("end-stats").innerHTML = [
+    ["Tempo", fmt(elapsed) + (rec ? " ★ recorde" : "")], ["Pontos", score], ["Skills", `${skGot}/${sk.length}`],
+    ["Troféus", `${trGot}/${tr.length}`], ["Bugs derrubados", `${stats.bugs}/${bugTot}`], ["Cards cabeceados", stats.coins], ["Fases vistas", `${seen}/${sects.length}`]
+  ].map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("");
+  $("end-bar").style.width = pct + "%";
+  $("end-t").textContent = pct + "% explorado";
+  $("end").hidden = false; $("again").focus();
+  sfx.trophy(); showBest();
+}
+
+function draw() {
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, innerWidth, H);
+  ctx.translate(0, -scrollY);
+  const top = scrollY - 60, bot = scrollY + H + 60;
+  ctx.font = "10px Silkscreen, monospace"; ctx.textAlign = "center"; ctx.textBaseline = "top";
+  for (const it of items) {
+    if (it.got) continue;
+    const ix = it.pl.x + it.fx * it.pl.w - 12, iy = it.pl.y - it.lift + Math.sin(it.ph) * 4;
+    if (iy < top || iy > bot) continue;
+    if (it.kind === "trophy") { drawSpr("trophy", ix + 1, iy, 3); continue; }
+    ctx.fillStyle = "#0b0e22"; ctx.fillRect(ix - 1, iy - 1, 26, 24);
+    ctx.fillStyle = "#4fd1a5"; ctx.fillRect(ix + 2, iy + 2, 20, 18);
+    ctx.fillStyle = "#151935"; ctx.fillRect(ix + 6, iy + 6, 12, 10);
+    ctx.fillStyle = "#4fd1a5"; ctx.fillRect(ix + 9, iy + 9, 6, 4);
+    const tw = ctx.measureText(it.label).width + 8;
+    ctx.fillStyle = "#0b0e22cc"; ctx.fillRect(ix + 12 - tw / 2, iy - 15, tw, 13);
+    ctx.fillStyle = "#eef0ff"; ctx.fillText(it.label, ix + 12, iy - 13);
+  }
+  for (const b of bugs) {
+    if (b.dead) continue;
+    const by = b.pl.y - 18; if (by < top || by > bot) continue;
+    drawSpr((Math.floor(performance.now() / 160) % 2) ? "bug1" : "bug2", b.pl.x + b.off, by, 3, b.dir < 0);
+  }
+  for (const q of parts) {
+    if (q.coin) drawSpr("coin", q.x, q.y, 3, false, Math.min(1, q.life / 15));
+    else { ctx.fillStyle = q.c; ctx.globalAlpha = Math.min(1, q.life / 20); ctx.fillRect(q.x, q.y, 3, 3); ctx.globalAlpha = 1; }
+  }
+  const p = P;
+  if (!(p.inv > 0 && Math.floor(p.inv / 5) % 2)) {
+    const f = p.dive ? "dive" : !p.onGround ? "jump" : Math.abs(p.vx) > 0.6 ? (Math.floor(p.anim) % 2 ? "run1" : "run2") : "idle";
+    drawSpr(f, p.x, p.y, SCALE, p.face < 0);
+    if (p.dive && quality) { ctx.fillStyle = "#ffc85766"; ctx.fillRect(p.x + 6, p.y - 18, 3, 14); ctx.fillRect(p.x + 15, p.y - 24, 3, 18); }
+  }
+  ctx.font = "11px Silkscreen, monospace";
+  for (const q of pops) { ctx.globalAlpha = Math.min(1, q.life / 20); ctx.fillStyle = "#0b0e22"; ctx.fillText(q.txt, q.x + 13, q.y + 1); ctx.fillStyle = q.c; ctx.fillText(q.txt, q.x + 12, q.y); }
+  ctx.globalAlpha = 1;
+}
+
+function hud() {
+  const sk = items.filter(i => i.kind === "skill");
+  $("h-time").textContent = fmt(elapsed);
+  $("h-score").textContent = score;
+  $("h-skills").textContent = `${sk.filter(i => i.got).length}/${sk.length}`;
+  $("h-fases").textContent = `${sects.filter(s => s.seen).length}/${sects.length}`;
+}
+
+function loop(now) {
+  if (!running) return;
+  const dt = Math.min(50, now - last); last = now;
+  elapsed += dt;
+  // qualidade automática: se ficar lento por ~1,5s, reduz resolução e partículas
+  if (quality && dt > 24) { if (++slowFrames > 90) { quality = 0; resize(); } } else slowFrames = Math.max(0, slowFrames - 1);
+  measureT += dt; if (measureT > 700) { measureT = 0; measure(); }
+  const k = dt / 16.667;
+  update(k);
+  const maxY = document.documentElement.scrollHeight - H;
+  const target = Math.max(0, Math.min(maxY, P.y + PH / 2 - H * 0.42));
+  camY += (target - camY) * Math.min(1, 0.14 * k);
+  scrollTo(0, Math.round(camY));
+  draw(); hud();
+  if (running) requestAnimationFrame(loop);
+}
+
+/* ---------- controles ---------- */
+const KEYMAP = { ArrowLeft: "left", KeyA: "left", ArrowRight: "right", KeyD: "right", ArrowDown: "down", KeyS: "down", Space: "jump", ArrowUp: "jump", KeyW: "jump" };
+function press(k, on) {
+  if (k === "jump" && on && !keys.jump) keys.jumpHit = true;
+  if (k === "down" && on && !keys.down) keys.downHit = true;
+  keys[k] = on;
+}
+addEventListener("keydown", e => {
+  if (!running) {
+    if (e.key === "Enter" && !$("end").hidden) { e.preventDefault(); start(); }
+    else if (e.key === "Enter" && document.activeElement === document.body) { e.preventDefault(); start(); }
+    else if (e.key === "Escape" && !$("end").hidden) { $("end").hidden = true; stop(); }
+    return;
+  }
+  if (e.key === "Escape") { stop(); return; }
+  const k = KEYMAP[e.code]; if (!k) return;
+  e.preventDefault(); press(k, true);
+});
+addEventListener("keyup", e => { const k = KEYMAP[e.code]; if (k) press(k, false); });
+addEventListener("blur", () => { keys = {}; });
+addEventListener("resize", () => { if (running) resize(); });
+document.querySelectorAll(".touch button").forEach(b => {
+  const k = b.dataset.k;
+  b.addEventListener("pointerdown", e => { e.preventDefault(); b.setPointerCapture(e.pointerId); b.classList.add("on"); press(k, true); });
+  const up = () => { b.classList.remove("on"); press(k, false); };
+  b.addEventListener("pointerup", up); b.addEventListener("pointercancel", up);
+});
+$("play").addEventListener("click", start);
+$("again").addEventListener("click", start);
+$("read").addEventListener("click", () => { $("end").hidden = true; stop(); scrollTo(0, 0); });
+$("h-exit").addEventListener("click", stop);
+$("h-sound").addEventListener("click", e => { soundOn = !soundOn; e.currentTarget.textContent = "SOM: " + (soundOn ? "ON" : "OFF"); e.currentTarget.blur(); });
+</script>
