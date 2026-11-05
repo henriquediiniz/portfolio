@@ -1,5 +1,16 @@
 <title>Henrique Diniz · Portfólio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Henrique Diniz, desenvolvedor full stack em Patos, PB: Java, Spring Boot, Node.js, React e Next.js. Engenheiro de software no Grupo Pau Brasil e graduando em Ciência da Computação na UEPB.">
+<meta name="theme-color" content="#151935">
+<link rel="canonical" href="https://henrique-diniz-portfolio.vercel.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath fill='%23151935' d='M0 0h8v8H0z'/%3E%3Cpath fill='%23ff6f59' d='M2 0h4v1h2v1H1V1h1z'/%3E%3Cpath fill='%23ffcfa3' d='M2 2h4v2H5v1H3V4H2zM0 6h1v1H0zM7 6h1v1H7z'/%3E%3Cpath fill='%23151935' d='M4 2h1v1H4z'/%3E%3Cpath fill='%234fd1a5' d='M1 5h6v1H6v2H2V6H1z'/%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://henrique-diniz-portfolio.vercel.app/">
+<meta property="og:title" content="Henrique Diniz · Desenvolvedor Full Stack">
+<meta property="og:description" content="Java/Spring, Node.js, React e Next.js. Portfólio em pixel art que vira jogo de plataforma.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Henrique Diniz","jobTitle":"Engenheiro de Software","url":"https://henrique-diniz-portfolio.vercel.app/","email":"mailto:henriquediniz.dev@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Patos","addressRegion":"PB","addressCountry":"BR"},"worksFor":{"@type":"Organization","name":"Grupo Pau Brasil"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universidade Estadual da Paraíba (UEPB)"},"knowsAbout":["Java","Spring Boot","Node.js","TypeScript","React","Next.js","SQL","AWS"],"sameAs":["https://www.linkedin.com/in/henriquediniz-dev/","https://github.com/henriquediiniz"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Silkscreen&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
@@ -61,6 +72,13 @@ h1 span { color: var(--coral); }
 .keys { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 11px var(--f-ui); color: var(--muted); }
 kbd { font: 11px var(--f-ui); border: 2px solid var(--line); border-bottom-width: 4px; padding: 1px 6px; color: var(--ink); background: var(--night-3); }
 .best { font: 11px var(--f-ui); color: var(--sun); }
+.hero-top { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; }
+.open { font: 11px var(--f-ui); text-transform: uppercase; letter-spacing: .05em; color: var(--mint); border: 2px solid var(--mint); padding: 2px 8px; margin: 0; }
+.open::before { content: "● "; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 4px 0 0; padding: 0; list-style: none; font: 13px var(--f-ui); text-transform: uppercase; letter-spacing: .04em; }
+.hero-links a { text-decoration: none; }
+.hero-links a:hover { text-decoration: underline; }
+.nojs { max-width: 1040px; margin: 28px auto; }
 
 /* fases */
 section.fase { display: grid; gap: 26px; scroll-margin-top: 20px; }
@@ -136,6 +154,7 @@ html.playing nav.top, html.playing .cta { visibility: hidden; }
 </style>
 
 <div class="wrap" id="app"></div>
+<noscript><div class="card nojs"><h3>Henrique Diniz · Desenvolvedor Full Stack</h3><p>Engenheiro de software no Grupo Pau Brasil, estagiário full stack na AI/R Compass UOL e graduando em Ciência da Computação na UEPB. Este portfólio precisa de JavaScript; enquanto isso: <a href="https://www.linkedin.com/in/henriquediniz-dev/">LinkedIn</a> · <a href="https://github.com/henriquediiniz">GitHub</a> · <a href="mailto:henriquediniz.dev@gmail.com">henriquediniz.dev@gmail.com</a></p></div></noscript>
 <footer id="fim" class="plat ground">
   <p id="fim-txt">Fim da torre. Feito com HTML, CSS e JavaScript em 2026.</p>
 </footer>
@@ -171,22 +190,25 @@ html.playing nav.top, html.playing .cta { visibility: hidden; }
 <script>
 /* ==========================================================
    EDITE AQUI: todo o conteúdo do portfólio sai deste objeto.
-   Os textos abaixo são exemplos; troque pelos seus dados.
    ========================================================== */
 const CONFIG = {
   nome: "Henrique",
   sobrenome: "Diniz",
   cargo: "Full Stack Developer · Engenheiro de Software",
-  resumo: "Construo sistemas de ponta a ponta, da API ao front-end, com foco em código organizado e fácil de evoluir. Hoje sou engenheiro de software no Grupo Pau Brasil e estagiário full stack na AI/R Compass UOL.",
+  disponivel: "Aberto a oportunidades",
+  resumo: "Construo sistemas de ponta a ponta, da API ao front-end, com Java/Spring, Node.js e React/Next.js. Sou engenheiro de software no Grupo Pau Brasil, estagiário full stack na AI/R Compass UOL e graduando em Ciência da Computação na UEPB.",
   perfil: {
     texto: [
       "Comecei como desenvolvedor back-end com Java e Spring, aprendendo o ecossistema que vem junto: APIs REST, bancos relacionais, testes e arquitetura em camadas.",
-      "Depois migrei para o desenvolvimento web e passei a trabalhar no stack inteiro, com TypeScript, React, Next.js e Node.js, sem largar a base de back-end. Hoje cuido da plataforma digital das empresas do Grupo Pau Brasil."
+      "Depois passei a trabalhar no stack inteiro, com TypeScript, React, Next.js e Node.js, sem largar a base de back-end. Hoje cuido da plataforma digital das empresas do Grupo Pau Brasil, do site institucional aos sites de cada empresa.",
+      "Em paralelo, curso Ciência da Computação na UEPB e tenho a certificação AWS Cloud Practitioner."
     ],
     fatos: [
       ["Atuação", "Full stack · Engenharia de Software"],
       ["Hoje", "Grupo Pau Brasil · AI/R Compass UOL"],
-      ["Cidade", "Patos, PB"]
+      ["Formação", "Ciência da Computação · UEPB · 2024–2028"],
+      ["Cidade", "Patos, PB"],
+      ["Status", "Aberto a oportunidades"]
     ]
   },
   skills: ["Java", "Spring Boot", "TypeScript", "JavaScript", "React", "Next.js", "Node.js", "Express", "AWS", "Microsserviços", "Docker", "SQL", "APIs REST", "Tailwind", "Git", "Vercel"],
@@ -198,6 +220,7 @@ const CONFIG = {
   trajetoria: [
     { ano: "Hoje", cargo: "Engenheiro de Software", local: "Grupo Pau Brasil", texto: "Desenvolvo a plataforma digital do grupo: site institucional, sites das empresas, portal do colaborador e área de carreiras." },
     { ano: "Hoje", cargo: "Estagiário Full Stack", local: "AI/R Compass UOL", texto: "Atuo no desenvolvimento full stack em projetos da Compass UOL." },
+    { ano: "2024–2028", cargo: "Ciência da Computação", local: "UEPB · Graduação", texto: "Bacharelado em andamento na Universidade Estadual da Paraíba. A teoria de algoritmos, estruturas de dados e bancos de dados ao lado da prática no trabalho." },
     { ano: "Desafio", cargo: "TechMart API e WorldScope", local: "Processo seletivo · KNEX Consultoria Jr.", texto: "Back-end em Node.js/Express com JWT e camadas, e front-end em Next.js 16 com TypeScript, SWR e proxy server-side para a API key." },
     { ano: "Início", cargo: "Desenvolvedor Back-end", local: "Java · Spring", texto: "Primeiros sistemas com Java e Spring, APIs REST e bancos relacionais. A base que levo para o full stack." }
   ],
@@ -206,16 +229,10 @@ const CONFIG = {
     { nome: "Unida Construtora", meta: "Construção civil · 2026", status: "No ar", texto: "Site da construtora com empreendimentos imobiliários e projetos de construção civil.", tags: ["Next.js", "Vercel"], link: "https://unida-construtora.vercel.app" },
     { nome: "TechMart API", meta: "API REST · Desafio KNEX", status: "No GitHub", texto: "Catálogo de produtos e vendas de uma loja virtual, substituindo o controle em planilhas. Autenticação JWT, senhas com bcrypt, camadas rotas → controllers → models e Docker.", tags: ["Node.js", "Express", "JWT", "Docker"], link: "https://github.com/henriquediiniz/techmart-api" },
     { nome: "WorldScope", meta: "Front-end · Desafio KNEX", status: "No GitHub", texto: "Explorador de países sobre a RestCountries API v5. Busca, filtro e ordenação instantâneos no client, i18n pt/en e a API key protegida por Route Handlers.", tags: ["Next.js", "React 19", "TypeScript", "SWR"], link: "https://github.com/henriquediiniz/worldscope" },
-    { nome: "Pau Brasil Bebidas", meta: "Distribuição · Ambev", status: "Em desenvolvimento", texto: "Site da distribuidora com as 8 unidades na Paraíba e na Bahia.", tags: ["Next.js"], link: "" },
-    { nome: "Pau Brasil Motos", meta: "Mobilidade · Honda", status: "Em desenvolvimento", texto: "Rede de concessionárias Honda, da escolha da moto à manutenção.", tags: ["Next.js"], link: "" },
-    { nome: "Instituto YSO", meta: "Saúde e estética", status: "Em desenvolvimento", texto: "Clínica de estética em Sousa (PB).", tags: ["Next.js"], link: "" },
-    { nome: "Original Start", meta: "Mobilidade", status: "Em desenvolvimento", texto: "Motopeças em Petrolina (PE).", tags: ["Next.js"], link: "" },
-    { nome: "Hora 10", meta: "Varejo", status: "Em desenvolvimento", texto: "Rede de lojas e supermercado no interior da Paraíba.", tags: ["Next.js"], link: "" },
-    { nome: "Locadora Pau Brasil", meta: "Mobilidade", status: "Em desenvolvimento", texto: "Locação de veículos e gestão de frotas para empresas.", tags: ["Next.js"], link: "" },
-    { nome: "Fazenda Divina", meta: "Agro", status: "Em desenvolvimento", texto: "Produção agropecuária com foco em pecuária e melhoramento genético.", tags: ["Next.js"], link: "" }
+    { nome: "Sites das empresas do grupo", meta: "Grupo Pau Brasil · 7 sites · 2026", status: "Em desenvolvimento", texto: "Um site para cada empresa do grupo, de segmentos bem diferentes: Pau Brasil Bebidas (distribuidora Ambev, 8 unidades na PB e BA), Pau Brasil Motos (concessionárias Honda), Instituto YSO (estética), Original Start (motopeças), Hora 10 (varejo), Locadora Pau Brasil (frotas) e Fazenda Divina (agro).", tags: ["Next.js", "Vercel"], link: "" }
   ],
   premios: [
-    { titulo: "Certificação AWS", meta: "Amazon Web Services", texto: "Certificação em computação na nuvem da AWS." }
+    { titulo: "AWS Certified Cloud Practitioner", meta: "Amazon Web Services", texto: "Fundamentos da nuvem AWS: serviços principais, segurança, arquitetura e modelo de custos." }
   ],
   contato: {
     email: "henriquediniz.dev@gmail.com",
@@ -240,17 +257,18 @@ function render() {
   body.push(fase("atuacao", "Atuação", `<div class="grid">${C.areas.map(a => `<article class="card plat"><h3>${esc(a.titulo)}</h3><p>${esc(a.texto)}</p>${tags(a.tags)}</article>`).join("")}</div>`));
   body.push(fase("trajetoria", "Trajetória", `<div class="grid timeline">${C.trajetoria.map(t => `<article class="card plat bugs"><span class="ano">${esc(t.ano)}</span><h3>${esc(t.cargo)}</h3><p class="meta">${esc(t.local)}</p><p>${esc(t.texto)}</p></article>`).join("")}</div>`));
   body.push(fase("projetos", "Projetos", `<div class="grid">${C.projetos.map(p => `<article class="card plat bugs">${p.status ? `<p class="status${p.status === "No ar" ? " on" : p.status === "No GitHub" ? " gh" : ""}">${esc(p.status)}</p>` : ""}<p class="meta">${esc(p.meta)}</p><h3>${esc(p.nome)}</h3><p>${esc(p.texto)}</p>${tags(p.tags)}${p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">Ver projeto →</a>` : ""}</article>`).join("")}</div>`));
-  if (C.premios.length) body.push(fase("premios", "Prêmios", `<div class="grid">${C.premios.map((p, i) => `<article class="card plat premio" data-premio="${i}">${TROPHY_SVG}<h3>${esc(p.titulo)}</h3><p class="meta">${esc(p.meta)}</p><p>${esc(p.texto)}</p></article>`).join("")}</div>`));
+  if (C.premios.length) body.push(fase("certificacoes", "Certificações", `<div class="grid">${C.premios.map((p, i) => `<article class="card plat premio" data-premio="${i}">${TROPHY_SVG}<h3>${esc(p.titulo)}</h3><p class="meta">${esc(p.meta)}</p><p>${esc(p.texto)}</p></article>`).join("")}</div>`));
   const ct = C.contato;
-  body.push(fase("contato", "Contato", `<div class="grid"><div class="card plat wide contact-list"><p>Quer conversar sobre um projeto ou uma vaga? Me chame por um destes canais.</p>
+  body.push(fase("contato", "Contato", `<div class="grid"><div class="card plat wide contact-list"><p>${C.disponivel ? "Estou aberto a novas oportunidades em desenvolvimento de software. " : ""}Quer conversar sobre um projeto ou uma vaga? Me chame por um destes canais.</p>
     <div class="contact-row"><code id="mail">${esc(ct.email)}</code><button class="mini" type="button" id="copy">Copiar e-mail</button></div>
     <div class="contact-row">${ct.linkedin ? `<a href="${esc(ct.linkedin)}" target="_blank" rel="noopener">LinkedIn →</a>` : ""}${ct.github ? `<a href="${esc(ct.github)}" target="_blank" rel="noopener">GitHub →</a>` : ""}</div></div></div>`));
   html += fases.map(f => `<a href="#${f.id}">${esc(f.nome)}</a>`).join("") + `</nav>`;
   html += `<header class="hero" id="topo"><div class="hero-card plat" id="hero">
-      <p class="eyebrow">Portfólio · ${new Date().getFullYear()}</p>
+      <div class="hero-top"><p class="eyebrow">Portfólio · ${new Date().getFullYear()}</p>${C.disponivel ? `<p class="open">${esc(C.disponivel)}</p>` : ""}</div>
       <h1>${esc(C.nome)}${C.sobrenome ? ` <span>${esc(C.sobrenome)}</span>` : `<span>.</span>`}</h1>
       <p class="role">${esc(C.cargo)}</p>
       <p class="lead">${esc(C.resumo)}</p>
+      <ul class="hero-links">${ct.linkedin ? `<li><a href="${esc(ct.linkedin)}" target="_blank" rel="noopener">LinkedIn ↗</a></li>` : ""}${ct.github ? `<li><a href="${esc(ct.github)}" target="_blank" rel="noopener">GitHub ↗</a></li>` : ""}<li><a href="mailto:${esc(ct.email)}">E-mail</a></li></ul>
     </div>
     <div class="cta"><button class="btn" id="play" type="button">▶ Jogar</button><a class="btn ghost" href="#perfil">Só quero ler ↓</a><span class="best" id="best"></span></div>
     <div class="keys"><span><kbd>←</kbd><kbd>→</kbd> anda</span><span><kbd>espaço</kbd> pula, 2× no ar</span><span><kbd>↓</kbd> desce do card · no ar: mergulho</span><span><kbd>enter</kbd> joga</span></div>
