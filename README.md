@@ -1,6 +1,6 @@
 # Henrique Diniz · Portfólio
 
-Portfólio que vira jogo de plataforma em pixel art. Em vez de rolar a página, você controla um personagem que desce pelo site: os cards viram plataformas, dá pra cabecear os cards, derrubar bugs, coletar as skills e pegar troféus. No fim aparecem o tempo, a pontuação e quanto do portfólio foi explorado.
+Portfólio que vira jogo de plataforma em pixel art. Em vez de rolar a página, você controla um personagem que desce pelo site: os cards viram plataformas, dá pra cabecear os cards (ou mergulhar neles) para soltar moedas, derrubar bugs, coletar as skills e pegar troféus. No fim aparecem o tempo, a pontuação e quanto do portfólio foi explorado.
 
 **No ar:** https://henrique-diniz-portfolio.vercel.app
 

@@ -30,6 +30,7 @@
   --f-display: "Pixelify Sans", "Courier New", monospace;
   --f-body: "Atkinson Hyperlegible", system-ui, sans-serif;
   --f-ui: "Silkscreen", "Courier New", monospace;
+  --clear: 46px;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -81,13 +82,16 @@ kbd { font: 11px var(--f-ui); border: 2px solid var(--line); border-bottom-width
 .nojs { max-width: 1040px; margin: 28px auto; }
 
 /* fases */
-section.fase { display: grid; gap: 26px; scroll-margin-top: 20px; }
+/* --clear: espaço vertical mínimo entre plataformas. Tem que ser maior que a altura do
+   personagem (PH = 36px no script); senão ele fica com a cabeça dentro do card de cima
+   e atravessa em vez de dar cabeçada. */
+section.fase { display: grid; gap: var(--clear); scroll-margin-top: 20px; }
 .fase-head { justify-self: start; display: grid; gap: 4px; background: var(--night-3); border: 3px solid var(--line); padding: 10px 18px 12px; box-shadow: 4px 4px 0 var(--shadow); }
 .fase-head .eyebrow { color: var(--sun); }
 h2 { font: 700 clamp(28px, 5vw, 40px)/1.05 var(--f-display); margin: 0; text-wrap: balance; letter-spacing: .02em; }
 /* a Pixelify junta "fi"/"fl" numa ligadura que fica ilegível */
 h1, h2, h3 { font-variant-ligatures: none; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 40px 36px; align-items: start; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 40px 36px; align-items: start; row-gap: var(--clear); }
 .card { background: var(--night-2); border: 3px solid var(--line); box-shadow: 6px 6px 0 var(--shadow); padding: 20px 22px; display: grid; gap: 10px; min-width: 0; }
 .card h3 { font: 700 22px/1.15 var(--f-display); margin: 0; }
 .card p { margin: 0; color: var(--muted); }
@@ -146,7 +150,7 @@ html.playing nav.top, html.playing .cta { visibility: hidden; }
 
 @media (max-width: 560px) {
   .wrap { gap: 64px; }
-  .grid { gap: 32px; }
+  .grid { gap: var(--clear) 32px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .plat.bump { animation: none; }
@@ -481,7 +485,9 @@ function bumpPlat(pl, fromBelow) {
   for (const b of bugs) if (!b.dead && b.pl === pl && Math.abs(b.pl.x + b.off - P.x) < 70) {
     b.dead = true; stats.bugs++; score += 100; sfx.kill(); burst(b.pl.x + b.off + 12, pl.y - 9, "#b07cff", 14, 3); pop(b.pl.x + b.off, pl.y - 30, "+100 BUG");
   }
-  if (fromBelow && pl.coin) {
+  // a moeda sai na cabeçada (por baixo) ou no mergulho (por cima): em telas largas há cards
+  // altos demais para alcançar por baixo, e o mergulho garante que todo card dá pra pegar
+  if (pl.coin) {
     pl.coin = false; stats.coins++; score += 50; sfx.coin();
     const cx = Math.max(pl.x, Math.min(pl.x + pl.w - 12, P.x + 6));
     parts.push({ x: cx, y: pl.y - 10, vx: 0, vy: -6, life: 34, coin: true }); pop(cx, pl.y - 30, "+50");
@@ -499,7 +505,7 @@ function finish() {
   if (rec) store.set("pf-best", String(Math.round(elapsed)));
   $("end-stats").innerHTML = [
     ["Tempo", fmt(elapsed) + (rec ? " ★ recorde" : "")], ["Pontos", score], ["Skills", `${skGot}/${sk.length}`],
-    ["Troféus", `${trGot}/${tr.length}`], ["Bugs derrubados", `${stats.bugs}/${bugTot}`], ["Cards cabeceados", stats.coins], ["Fases vistas", `${seen}/${sects.length}`]
+    ["Troféus", `${trGot}/${tr.length}`], ["Bugs derrubados", `${stats.bugs}/${bugTot}`], ["Moedas dos cards", `${stats.coins}/${plats.filter(p => p.card).length}`], ["Fases vistas", `${seen}/${sects.length}`]
   ].map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("");
   $("end-bar").style.width = pct + "%";
   $("end-t").textContent = pct + "% explorado";
