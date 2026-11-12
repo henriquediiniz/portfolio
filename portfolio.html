@@ -1,6 +1,6 @@
 <title>Henrique Diniz · Portfólio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Henrique Diniz, desenvolvedor full stack em Patos, PB: Java, Spring Boot, Node.js, React e Next.js. Engenheiro de software no Grupo Pau Brasil e graduando em Ciência da Computação na UEPB.">
+<meta name="description" content="Henrique Diniz, desenvolvedor full stack em Patos, PB: TypeScript, Node.js, NestJS, React, Next.js, PostgreSQL e MongoDB. Engenheiro de software no Grupo Pau Brasil e graduando em Ciência da Computação na UEPB.">
 <meta name="theme-color" content="#151935">
 <link rel="canonical" href="https://henrique-diniz-portfolio.vercel.app/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath fill='%23151935' d='M0 0h8v8H0z'/%3E%3Cpath fill='%23ff6f59' d='M2 0h4v1h2v1H1V1h1z'/%3E%3Cpath fill='%23ffcfa3' d='M2 2h4v2H5v1H3V4H2zM0 6h1v1H0zM7 6h1v1H7z'/%3E%3Cpath fill='%23151935' d='M4 2h1v1H4z'/%3E%3Cpath fill='%234fd1a5' d='M1 5h6v1H6v2H2V6H1z'/%3E%3C/svg%3E">
@@ -8,9 +8,9 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://henrique-diniz-portfolio.vercel.app/">
 <meta property="og:title" content="Henrique Diniz · Desenvolvedor Full Stack">
-<meta property="og:description" content="Java/Spring, Node.js, React e Next.js. Portfólio em pixel art que vira jogo de plataforma.">
+<meta property="og:description" content="TypeScript, Node.js, NestJS, React e Next.js. Portfólio em pixel art que vira jogo de plataforma.">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Henrique Diniz","jobTitle":"Engenheiro de Software","url":"https://henrique-diniz-portfolio.vercel.app/","email":"mailto:henriquediniz.dev@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Patos","addressRegion":"PB","addressCountry":"BR"},"worksFor":{"@type":"Organization","name":"Grupo Pau Brasil"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universidade Estadual da Paraíba (UEPB)"},"knowsAbout":["Java","Spring Boot","Node.js","TypeScript","React","Next.js","SQL","AWS"],"sameAs":["https://www.linkedin.com/in/henriquediniz-dev/","https://github.com/henriquediiniz"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Henrique Diniz","jobTitle":"Engenheiro de Software","url":"https://henrique-diniz-portfolio.vercel.app/","email":"mailto:henriquediniz.dev@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Patos","addressRegion":"PB","addressCountry":"BR"},"worksFor":{"@type":"Organization","name":"Grupo Pau Brasil"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universidade Estadual da Paraíba (UEPB)"},"knowsAbout":["TypeScript","Node.js","NestJS","React","Next.js","PostgreSQL","MongoDB","AWS"],"sameAs":["https://www.linkedin.com/in/henriquediniz-dev/","https://github.com/henriquediiniz"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Silkscreen&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
@@ -196,11 +196,11 @@ const CONFIG = {
   sobrenome: "Diniz",
   cargo: "Full Stack Developer · Engenheiro de Software",
   disponivel: "Aberto a oportunidades",
-  resumo: "Construo sistemas de ponta a ponta, da API ao front-end, com Java/Spring, Node.js e React/Next.js. Sou engenheiro de software no Grupo Pau Brasil, estagiário full stack na AI/R Compass UOL e graduando em Ciência da Computação na UEPB.",
+  resumo: "Construo sistemas de ponta a ponta, do banco de dados à interface, com Node.js, NestJS e React/Next.js. Sou engenheiro de software no Grupo Pau Brasil, estagiário full stack na AI/R Compass UOL e graduando em Ciência da Computação na UEPB.",
   perfil: {
     texto: [
-      "Comecei como desenvolvedor back-end com Java e Spring, aprendendo o ecossistema que vem junto: APIs REST, bancos relacionais, testes e arquitetura em camadas.",
-      "Depois passei a trabalhar no stack inteiro, com TypeScript, React, Next.js e Node.js, sem largar a base de back-end. Hoje cuido da plataforma digital das empresas do Grupo Pau Brasil, do site institucional aos sites de cada empresa.",
+      "Trabalho no stack inteiro com TypeScript. No back-end, construo APIs em Node.js e NestJS com PostgreSQL e MongoDB; no front-end, uso React e Next.js.",
+      "Hoje cuido da plataforma digital das empresas do Grupo Pau Brasil, do site institucional aos sites de cada empresa, e também desenvolvo projetos como freelancer.",
       "Em paralelo, curso Ciência da Computação na UEPB e tenho a certificação AWS Cloud Practitioner."
     ],
     fatos: [
@@ -211,25 +211,27 @@ const CONFIG = {
       ["Status", "Aberto a oportunidades"]
     ]
   },
-  skills: ["Java", "Spring Boot", "TypeScript", "JavaScript", "React", "Next.js", "Node.js", "Express", "AWS", "Microsserviços", "Docker", "SQL", "APIs REST", "Tailwind", "Git", "Vercel"],
+  skills: ["TypeScript", "JavaScript", "Node.js", "NestJS", "Express", "PostgreSQL", "MongoDB", "React", "Next.js", "Tailwind", "APIs REST", "Docker", "AWS", "Microsserviços", "Git", "Vercel"],
   areas: [
-    { titulo: "Back-end e APIs", texto: "APIs REST com autenticação JWT, regras de negócio isoladas em camadas e tratamento de erros consistente. Comecei em Java/Spring e hoje também uso Node.js e Express.", tags: ["Java", "Spring Boot", "Node.js", "SQL"] },
+    { titulo: "Back-end e APIs", texto: "APIs REST em Node.js com NestJS e Express: autenticação JWT, regras de negócio isoladas em camadas e tratamento de erros consistente. Dados em PostgreSQL ou MongoDB, conforme o que o domínio pede.", tags: ["Node.js", "NestJS", "PostgreSQL", "MongoDB"] },
     { titulo: "Front-end", texto: "Interfaces em React e Next.js com TypeScript strict, cache de dados com SWR, tema claro/escuro e i18n. Componentes de apresentação separados da lógica.", tags: ["React", "Next.js", "TypeScript", "Tailwind"] },
     { titulo: "Cloud e arquitetura", texto: "Deploy contínuo, containers e serviços na AWS. Divido sistemas em serviços quando o domínio pede e mantenho chaves e segredos fora do client.", tags: ["AWS", "Microsserviços", "Docker", "Vercel"] }
   ],
   trajetoria: [
-    { ano: "Hoje", cargo: "Engenheiro de Software", local: "Grupo Pau Brasil", texto: "Desenvolvo a plataforma digital do grupo: site institucional, sites das empresas, portal do colaborador e área de carreiras." },
-    { ano: "Hoje", cargo: "Estagiário Full Stack", local: "AI/R Compass UOL", texto: "Atuo no desenvolvimento full stack em projetos da Compass UOL." },
+    { ano: "Out 2026 – hoje", cargo: "Engenheiro de Software", local: "Grupo Pau Brasil", texto: "Responsável pela plataforma digital do grupo e das empresas, da pesquisa e do design até o deploy: hub institucional, portal do colaborador, Unida Construtora com painel administrativo e a primeira versão do site do Hora 10." },
+    { ano: "Nov 2026 – hoje", cargo: "Estagiário Full Stack", local: "AI/R Compass UOL · Remoto", texto: "Estágio com Scrum: APIs em Node.js e NestJS com MongoDB, cache, BFF e DDD; front-end em React e Next.js com Zustand; testes com Jest e Cypress; entrega com Docker e Azure DevOps." },
+    { ano: "Freelance", cargo: "Desenvolvedor Full Stack", local: "Projetos para clientes", texto: "Sites e sistemas sob demanda, do back-end ao front-end." },
     { ano: "2024–2028", cargo: "Ciência da Computação", local: "UEPB · Graduação", texto: "Bacharelado em andamento na Universidade Estadual da Paraíba. A teoria de algoritmos, estruturas de dados e bancos de dados ao lado da prática no trabalho." },
-    { ano: "Desafio", cargo: "TechMart API e WorldScope", local: "Processo seletivo · KNEX Consultoria Jr.", texto: "Back-end em Node.js/Express com JWT e camadas, e front-end em Next.js 16 com TypeScript, SWR e proxy server-side para a API key." },
-    { ano: "Início", cargo: "Desenvolvedor Back-end", local: "Java · Spring", texto: "Primeiros sistemas com Java e Spring, APIs REST e bancos relacionais. A base que levo para o full stack." }
+    { ano: "Desafio", cargo: "TechMart API e WorldScope", local: "Processo seletivo · KNEX Consultoria Jr.", texto: "Back-end em Node.js/Express com JWT e camadas, e front-end em Next.js 16 com TypeScript, SWR e proxy server-side para a API key." }
   ],
   projetos: [
     { nome: "Grupo Pau Brasil", meta: "Site institucional e portal · 2026", status: "No ar", texto: "Site do grupo com ecossistema de empresas filtrável por segmento, newsletter, vagas, linha do tempo e acesso ao portal do colaborador.", tags: ["Next.js", "TypeScript", "Vercel"], link: "https://pau-brasil-development.vercel.app/" },
-    { nome: "Unida Construtora", meta: "Construção civil · 2026", status: "No ar", texto: "Site da construtora com empreendimentos imobiliários e projetos de construção civil.", tags: ["Next.js", "Vercel"], link: "https://unida-construtora.vercel.app" },
+    { nome: "Unida Construtora", meta: "Construção civil · 2026", status: "No ar", texto: "Site da construtora com painel administrativo para gerenciar empreendimentos, fotos, andamento de obras e contatos recebidos.", tags: ["Next.js", "Vercel"], link: "https://unida-construtora.vercel.app" },
+    { nome: "Portal do colaborador", meta: "Grupo Pau Brasil · Sistema interno", status: "Interno", texto: "Plataforma interna do grupo com áreas para colaboradores, gestão, universidade corporativa, financeiro e score de clientes.", tags: [], link: "" },
+    { nome: "Hora 10", meta: "Varejo · Supermercados · 2026", status: "Primeira versão", texto: "Site institucional da rede de supermercados, com lojas, ofertas e história, integrado à loja online que a rede já tinha.", tags: ["Next.js"], link: "" },
     { nome: "TechMart API", meta: "API REST · Desafio KNEX", status: "No GitHub", texto: "Catálogo de produtos e vendas de uma loja virtual, substituindo o controle em planilhas. Autenticação JWT, senhas com bcrypt, camadas rotas → controllers → models e Docker.", tags: ["Node.js", "Express", "JWT", "Docker"], link: "https://github.com/henriquediiniz/techmart-api" },
     { nome: "WorldScope", meta: "Front-end · Desafio KNEX", status: "No GitHub", texto: "Explorador de países sobre a RestCountries API v5. Busca, filtro e ordenação instantâneos no client, i18n pt/en e a API key protegida por Route Handlers.", tags: ["Next.js", "React 19", "TypeScript", "SWR"], link: "https://github.com/henriquediiniz/worldscope" },
-    { nome: "Sites das empresas do grupo", meta: "Grupo Pau Brasil · 7 sites · 2026", status: "Em desenvolvimento", texto: "Um site para cada empresa do grupo, de segmentos bem diferentes: Pau Brasil Bebidas (distribuidora Ambev, 8 unidades na PB e BA), Pau Brasil Motos (concessionárias Honda), Instituto YSO (estética), Original Start (motopeças), Hora 10 (varejo), Locadora Pau Brasil (frotas) e Fazenda Divina (agro).", tags: ["Next.js", "Vercel"], link: "" }
+    { nome: "Sites das empresas do grupo", meta: "Grupo Pau Brasil · 6 sites · 2026", status: "Em desenvolvimento", texto: "Um site para cada empresa do grupo, de segmentos bem diferentes: Pau Brasil Bebidas (distribuidora Ambev, 8 unidades na PB e BA), Pau Brasil Motos (concessionárias Honda), Instituto YSO (estética), Original Start (motopeças), Locadora Pau Brasil (frotas) e Fazenda Divina (agro).", tags: ["Next.js", "Vercel"], link: "" }
   ],
   premios: [
     { titulo: "AWS Certified Cloud Practitioner", meta: "Amazon Web Services", texto: "Fundamentos da nuvem AWS: serviços principais, segurança, arquitetura e modelo de custos." }
